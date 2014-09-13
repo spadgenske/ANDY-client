@@ -20,10 +20,19 @@ class Client():
             print 'Type "cmds" for list of cmds, "help" for help, "exit" for exiting.'
         except:
             print 'Cannot Connect to Andy'
+            print'+++++++++++++++++++++++++++++++++++++++++++++++'
+            print
+            #Get new ip
+            print "Please Enter Andy's IP address:"
+            new_ip = raw_input('>>')
+            #save to file
+            self.file = open('ip.txt', 'w')
+            self.file.write(new_ip)
+            #Restart program
+            print "Please restart Andy's client software"
             time.sleep(10)
             sys.exit()
-
-        
+                   
     def logo(self):
         print'           _   _ _______     __'
         print'     /\   | \ | |  __ \ \   / /'
